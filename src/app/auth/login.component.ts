@@ -1,10 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { finalize } from 'rxjs/operators';
-
-import { environment } from '@env/environment';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Logger, untilDestroyed } from '@core';
+import { environment } from '@env/environment';
+import { finalize } from 'rxjs/operators';
 import { AuthenticationService } from './authentication.service';
 
 const log = new Logger('Login');
@@ -60,7 +59,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
-      remember: true,
+      remember: false,
     });
   }
 }
