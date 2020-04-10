@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-
 import { Credentials, CredentialsService } from './credentials.service';
 
 export interface LoginContext {

@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Logger, untilDestroyed } from '@core';
+import { AuthenticationService } from '@core/services/auth';
 import { environment } from '@env/environment';
 import { finalize } from 'rxjs/operators';
-import { AuthenticationService } from './authentication.service';
 
 const log = new Logger('Login');
 
