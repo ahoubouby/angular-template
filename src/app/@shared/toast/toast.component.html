@@ -1,0 +1,6 @@
+<div class="toast-wrapper">
+    <div *ngFor="let item of items; let i = index; trackBy: trackByFn" ngClass="toast {{item.status}}">
+      {{item.message}}
+      <a (click)="close(i)">✕</a>
+    </div>
+  </div>
